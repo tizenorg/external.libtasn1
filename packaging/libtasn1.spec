@@ -6,6 +6,7 @@ Group:      System/Libraries
 License:    LGPLv2.1+
 URL:        http://www.gnu.org/software/gnutls/download.html
 Source0:    http://www.gnu.org/software/gnutls/releases/libtasn1/%{name}-%{version}.tar.gz
+Source1001: packaging/libtasn1.manifest 
 Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  bison
@@ -49,6 +50,7 @@ use libtasn1.
 
 
 %build
+cp %{SOURCE1001} .
 
 %configure --disable-static
 make %{?jobs:-j%jobs}
@@ -67,15 +69,18 @@ rm -rf %{buildroot}
 
 
 %files
+%manifest libtasn1.manifest
 %defattr(-,root,root,-)
 %{_libdir}/*.so.*
 
 
 %files tools
+%manifest libtasn1.manifest
 %defattr(-,root,root,-)
 %_bindir/asn1*
 
 %files devel
+%manifest libtasn1.manifest
 %defattr(-,root,root,-)
 %_libdir/*.so
 %_libdir/pkgconfig/*.pc
