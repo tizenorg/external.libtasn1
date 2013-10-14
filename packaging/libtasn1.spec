@@ -56,7 +56,8 @@ make %{?jobs:-j%jobs}
 %install
 rm -rf %{buildroot}
 %make_install 
-
+mkdir -p %{buildroot}/usr/share/license
+cp COPYING %{buildroot}/usr/share/license/%{name}
 
 %remove_docs
 
@@ -69,6 +70,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %{_libdir}/*.so.*
+/usr/share/license/%{name}
 
 
 %files tools
