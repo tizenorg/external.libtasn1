@@ -10,6 +10,7 @@ Requires(post): /sbin/ldconfig
 Requires(postun): /sbin/ldconfig
 BuildRequires:  bison
 
+
 %description
 This is the ASN.1 library used in GNUTLS.  More up to date information can
 be found at http://www.gnu.org/software/gnutls and http://www.gnutls.org
