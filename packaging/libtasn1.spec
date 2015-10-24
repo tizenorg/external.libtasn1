@@ -3,7 +3,7 @@ Summary:    This is the ASN.1 library used in GNUTLS
 Version:    2.7
 Release:    2
 Group:      System/Libraries
-License:    LGPL-2.1+ or GPL-3.0+
+License:    LGPLv2.1+
 URL:        http://www.gnu.org/software/gnutls/download.html
 Source0:    http://www.gnu.org/software/gnutls/releases/libtasn1/%{name}-%{version}.tar.gz
 Requires(post): /sbin/ldconfig
@@ -19,7 +19,7 @@ be found at http://www.gnu.org/software/gnutls and http://www.gnutls.org
 
 %package tools
 Summary:    Some ASN.1 tools
-License:    GPL-3.0+
+License:    GPLv3+
 Group:      Applications/Text
 Requires:   %{name} = %{version}-%{release}
 
